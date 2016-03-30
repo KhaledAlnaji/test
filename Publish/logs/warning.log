@@ -1,0 +1,11 @@
+Warning: CustomCategory:sw_agile_guidance_guidelines: Empty content category element not published.
+Warning: CustomCategory:sw_agile_guidance_toolmentors: Empty content category element not published.
+Warning: Role:sw_comm_developer: Missing referenced element Artifact:sw_comm_hand_software_unit_test_specification
+Warning: RoleDescriptor:sw_comm_developer: Missing referenced element Artifact:sw_comm_hand_software_unit_test_specification
+Warning: RoleDescriptor:sw_comm_developer: Missing referenced element Artifact:sw_comm_hand_software_unit_test_specification
+Warning: RoleDescriptor:sw_comm_developer: Missing referenced element Artifact:sw_comm_hand_software_unit_test_specification
+Warning: RoleDescriptor:sw_comm_developer: Missing referenced element Artifact:sw_comm_hand_software_unit_test_specification
+Warning: RoleDescriptor:sw_comm_developer: Missing referenced element Artifact:sw_comm_hand_software_unit_test_specification
+Warning: RoleDescriptor:sw_comm_developer: Missing referenced element Artifact:sw_comm_hand_software_unit_test_specification
+Warning: RoleDescriptor:sw_comm_developer: Missing referenced element Artifact:sw_comm_hand_software_unit_test_specification
+Warning: Artifact:sw_comm_hand_software_unit_test_specification: IUPP0003W: Element was not published because it is not a valid element in the configuration.

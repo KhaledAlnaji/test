@@ -1,0 +1,1508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<REQ-IF xmlns="http://www.omg.org/spec/ReqIF/20110401/reqif.xsd" xmlns:configuration="http://eclipse.org/rmf/pror/toolextensions/1.0" xmlns:headline="http://pror.org/presentation/headline" xmlns:id="http://pror.org/presentation/id" xmlns:linewrap="http://pror.org/presentation/linewrap" xmlns:rtf="http://pror.org/presentation/rtf" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <THE-HEADER>
+    <REQ-IF-HEADER IDENTIFIER="rmf-242de7f8-0b7b-4103-9d74-405c733f1fcc">
+      <COMMENT>Created by: douwe.gerritsen</COMMENT>
+      <CREATION-TIME>2014-03-05T09:47:11.846+01:00</CREATION-TIME>
+      <REQ-IF-TOOL-ID>ProR (http://pror.org)</REQ-IF-TOOL-ID>
+      <REQ-IF-VERSION>1.0.1</REQ-IF-VERSION>
+      <SOURCE-TOOL-ID>ProR (http://pror.org)</SOURCE-TOOL-ID>
+      <TITLE>Software Requirement Specification (SRS) Template</TITLE>
+    </REQ-IF-HEADER>
+  </THE-HEADER>
+  <CORE-CONTENT>
+    <REQ-IF-CONTENT>
+      <DATATYPES>
+        <DATATYPE-DEFINITION-STRING IDENTIFIER="_vkjdkKRCEeOJUuR4caRF_A" LAST-CHANGE="2014-03-05T09:47:11.846+01:00" LONG-NAME="T_String32k" MAX-LENGTH="32000"/>
+        <DATATYPE-DEFINITION-ENUMERATION IDENTIFIER="_hcmO8KRDEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T09:52:43.113+01:00" LONG-NAME="State">
+          <SPECIFIED-VALUES>
+            <ENUM-VALUE IDENTIFIER="_iiVH8KRDEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T09:52:52.166+01:00" LONG-NAME="Draft"/>
+            <ENUM-VALUE IDENTIFIER="_kvGhgKRDEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T09:53:07.157+01:00" LONG-NAME="Proposed"/>
+            <ENUM-VALUE IDENTIFIER="_l0OWgKRDEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T09:53:14.160+01:00" LONG-NAME="Accepted"/>
+            <ENUM-VALUE IDENTIFIER="_o8bdkKRDEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T09:53:34.834+01:00" LONG-NAME="Rejected"/>
+            <ENUM-VALUE IDENTIFIER="_p7wMkKRDEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T09:53:42.050+01:00" LONG-NAME="Cancelled"/>
+          </SPECIFIED-VALUES>
+        </DATATYPE-DEFINITION-ENUMERATION>
+        <DATATYPE-DEFINITION-STRING IDENTIFIER="_tdlfIKREEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:01:14.057+01:00" LONG-NAME="ID" MAX-LENGTH="20"/>
+        <DATATYPE-DEFINITION-STRING IDENTIFIER="_Pieg0KRFEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:05:00.691+01:00" LONG-NAME="Header 1" MAX-LENGTH="100"/>
+        <DATATYPE-DEFINITION-STRING IDENTIFIER="_S7NXMKRFEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:05:24.323+01:00" LONG-NAME="Header 2" MAX-LENGTH="100"/>
+        <DATATYPE-DEFINITION-STRING IDENTIFIER="_WFJjoKRFEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:05:46.391+01:00" LONG-NAME="Header 3" MAX-LENGTH="100"/>
+        <DATATYPE-DEFINITION-STRING IDENTIFIER="_YNyEEKRFEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:06:00.451+01:00" LONG-NAME="Header 4" MAX-LENGTH="100"/>
+        <DATATYPE-DEFINITION-STRING IDENTIFIER="_bogegKRFEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:06:14.795+01:00" LONG-NAME="Header 5" MAX-LENGTH="100"/>
+        <DATATYPE-DEFINITION-XHTML IDENTIFIER="_de8w0KRHEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:20:55.034+01:00" LONG-NAME="Rich Text"/>
+        <DATATYPE-DEFINITION-ENUMERATION IDENTIFIER="_hPfi4KRKEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:42:47.817+01:00" LONG-NAME="Type">
+          <SPECIFIED-VALUES>
+            <ENUM-VALUE IDENTIFIER="_jO-HUKRKEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:43:03.308+01:00" LONG-NAME="Functional Requirement"/>
+            <ENUM-VALUE IDENTIFIER="_llpDwKRKEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:43:19.018+01:00" LONG-NAME="Non-Functional Requirement"/>
+            <ENUM-VALUE IDENTIFIER="_oKHysKRKEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:43:36.355+01:00" LONG-NAME="Constraint"/>
+            <ENUM-VALUE IDENTIFIER="_qyCQIKRKEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:43:53.659+01:00" LONG-NAME="Safety Requirement"/>
+            <ENUM-VALUE IDENTIFIER="_CzfokKRMEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:53:39.796+01:00" LONG-NAME="Information"/>
+            <ENUM-VALUE IDENTIFIER="_EbGfkKRMEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:53:55.675+01:00" LONG-NAME="Header"/>
+          </SPECIFIED-VALUES>
+        </DATATYPE-DEFINITION-ENUMERATION>
+      </DATATYPES>
+      <SPEC-TYPES>
+        <SPEC-OBJECT-TYPE IDENTIFIER="_vkjdkaRCEeOJUuR4caRF_A" LAST-CHANGE="2014-03-05T09:47:11.846+01:00" LONG-NAME="Requirement Type">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_vkjdkqRCEeOJUuR4caRF_A" LAST-CHANGE="2014-03-05T09:47:11.846+01:00" LONG-NAME="Description">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_vkjdkKRCEeOJUuR4caRF_A</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_Z6Zo0KRDEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T09:51:48.735+01:00" LONG-NAME="ID" IS-EDITABLE="false">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_tdlfIKREEeOf8ellMwLFzg</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-ENUMERATION IDENTIFIER="_rtSboKRDEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T09:53:51.912+01:00" LONG-NAME="State" IS-EDITABLE="true" MULTI-VALUED="false">
+              <TYPE>
+                <DATATYPE-DEFINITION-ENUMERATION-REF>_hcmO8KRDEeOf8ellMwLFzg</DATATYPE-DEFINITION-ENUMERATION-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-ENUMERATION>
+            <ATTRIBUTE-DEFINITION-ENUMERATION IDENTIFIER="_tEqaEKRKEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:44:08.031+01:00" LONG-NAME="Type" IS-EDITABLE="true">
+              <TYPE>
+                <DATATYPE-DEFINITION-ENUMERATION-REF>_hPfi4KRKEeOf8ellMwLFzg</DATATYPE-DEFINITION-ENUMERATION-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-ENUMERATION>
+          </SPEC-ATTRIBUTES>
+        </SPEC-OBJECT-TYPE>
+        <SPECIFICATION-TYPE IDENTIFIER="_vkjdk6RCEeOJUuR4caRF_A" LAST-CHANGE="2014-03-05T09:47:11.846+01:00" LONG-NAME="Specification Type">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_vkjdlKRCEeOJUuR4caRF_A" LAST-CHANGE="2014-03-05T09:47:11.846+01:00" LONG-NAME="Description">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_vkjdkKRCEeOJUuR4caRF_A</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+          </SPEC-ATTRIBUTES>
+        </SPECIFICATION-TYPE>
+        <SPEC-OBJECT-TYPE IDENTIFIER="_-7ENMKRFEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:10:21.056+01:00" LONG-NAME="Header 1">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_JpXi8KRGEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:11:18.274+01:00" LONG-NAME="Description" IS-EDITABLE="true">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_Pieg0KRFEeOf8ellMwLFzg</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-ENUMERATION IDENTIFIER="_HTJDsKRMEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:54:10.674+01:00" LONG-NAME="Type" IS-EDITABLE="true">
+              <TYPE>
+                <DATATYPE-DEFINITION-ENUMERATION-REF>_hPfi4KRKEeOf8ellMwLFzg</DATATYPE-DEFINITION-ENUMERATION-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-ENUMERATION>
+          </SPEC-ATTRIBUTES>
+        </SPEC-OBJECT-TYPE>
+        <SPEC-OBJECT-TYPE IDENTIFIER="_AsOMUKRHEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:17:39.585+01:00" LONG-NAME="Header 2">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_Cp-ScKRHEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:17:54.179+01:00" LONG-NAME="Description" IS-EDITABLE="true">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_S7NXMKRFEeOf8ellMwLFzg</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-ENUMERATION IDENTIFIER="_WcCVcKRMEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:55:54.930+01:00" LONG-NAME="Type" IS-EDITABLE="true">
+              <TYPE>
+                <DATATYPE-DEFINITION-ENUMERATION-REF>_hPfi4KRKEeOf8ellMwLFzg</DATATYPE-DEFINITION-ENUMERATION-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-ENUMERATION>
+          </SPEC-ATTRIBUTES>
+        </SPEC-OBJECT-TYPE>
+        <SPEC-OBJECT-TYPE IDENTIFIER="_GK9s8KRHEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:18:19.445+01:00" LONG-NAME="Header 3">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_IQfPAKRHEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:18:33.274+01:00" LONG-NAME="Description" IS-EDITABLE="true">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_WFJjoKRFEeOf8ellMwLFzg</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-ENUMERATION IDENTIFIER="_Yy9wkKRMEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:56:09.929+01:00" LONG-NAME="Type" IS-EDITABLE="true">
+              <TYPE>
+                <DATATYPE-DEFINITION-ENUMERATION-REF>_hPfi4KRKEeOf8ellMwLFzg</DATATYPE-DEFINITION-ENUMERATION-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-ENUMERATION>
+          </SPEC-ATTRIBUTES>
+        </SPEC-OBJECT-TYPE>
+        <SPEC-OBJECT-TYPE IDENTIFIER="_Lhr6AKRHEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:18:55.349+01:00" LONG-NAME="Header 4">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_NxcWIKRHEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:19:10.189+01:00" LONG-NAME="Description" IS-EDITABLE="true">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_YNyEEKRFEeOf8ellMwLFzg</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-ENUMERATION IDENTIFIER="_b34TEKRMEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:56:28.186+01:00" LONG-NAME="Type" IS-EDITABLE="true">
+              <TYPE>
+                <DATATYPE-DEFINITION-ENUMERATION-REF>_hPfi4KRKEeOf8ellMwLFzg</DATATYPE-DEFINITION-ENUMERATION-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-ENUMERATION>
+          </SPEC-ATTRIBUTES>
+        </SPEC-OBJECT-TYPE>
+        <SPEC-OBJECT-TYPE IDENTIFIER="_RblsoKRHEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:19:34.847+01:00" LONG-NAME="Header 5">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-STRING IDENTIFIER="_UKKLsKRHEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:19:53.173+01:00" LONG-NAME="Description" IS-EDITABLE="true">
+              <TYPE>
+                <DATATYPE-DEFINITION-STRING-REF>_bogegKRFEeOf8ellMwLFzg</DATATYPE-DEFINITION-STRING-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-STRING>
+            <ATTRIBUTE-DEFINITION-ENUMERATION IDENTIFIER="_es28IKRMEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:56:50.979+01:00" LONG-NAME="Type" IS-EDITABLE="true" MULTI-VALUED="false">
+              <TYPE>
+                <DATATYPE-DEFINITION-ENUMERATION-REF>_hPfi4KRKEeOf8ellMwLFzg</DATATYPE-DEFINITION-ENUMERATION-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-ENUMERATION>
+          </SPEC-ATTRIBUTES>
+        </SPEC-OBJECT-TYPE>
+        <SPEC-OBJECT-TYPE IDENTIFIER="_gc2sYKRHEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:21:13.997+01:00" LONG-NAME="Information">
+          <SPEC-ATTRIBUTES>
+            <ATTRIBUTE-DEFINITION-XHTML IDENTIFIER="_bPw1EKRKEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:41:57.182+01:00" LONG-NAME="Description" IS-EDITABLE="true">
+              <TYPE>
+                <DATATYPE-DEFINITION-XHTML-REF>_de8w0KRHEeOf8ellMwLFzg</DATATYPE-DEFINITION-XHTML-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-XHTML>
+            <ATTRIBUTE-DEFINITION-ENUMERATION IDENTIFIER="_hlRTsKRMEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:57:10.908+01:00" LONG-NAME="Type" IS-EDITABLE="true">
+              <TYPE>
+                <DATATYPE-DEFINITION-ENUMERATION-REF>_hPfi4KRKEeOf8ellMwLFzg</DATATYPE-DEFINITION-ENUMERATION-REF>
+              </TYPE>
+            </ATTRIBUTE-DEFINITION-ENUMERATION>
+          </SPEC-ATTRIBUTES>
+        </SPEC-OBJECT-TYPE>
+      </SPEC-TYPES>
+      <SPEC-OBJECTS>
+        <SPEC-OBJECT IDENTIFIER="_vkjdlaRCEeOJUuR4caRF_A" LAST-CHANGE="2014-03-05T09:47:11.846+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Start editing here.">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_vkjdkqRCEeOJUuR4caRF_A</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="REQ-1">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_Z6Zo0KRDEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_vkjdkaRCEeOJUuR4caRF_A</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_3uUIEKREEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:02:20.997+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="SW-MOD-2">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_Z6Zo0KRDEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_vkjdkaRCEeOJUuR4caRF_A</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_HXFlAKRLEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:46:59.143+01:00">
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_-7ENMKRFEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_IfGV8KRLEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:57:45.912+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Software Requirement Specification">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_JpXi8KRGEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_HTJDsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_-7ENMKRFEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_svKj0KRNEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T14:16:19.696+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_CzfokKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_hlRTsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:p style="text-align: left;font-family: Arial;"><xhtml:b>Project:</xhtml:b> <xhtml:i>&lt;Project></xhtml:i></xhtml:p><xhtml:p style="text-align: left;font-family: Arial;"><xhtml:b>Author:</xhtml:b> <xhtml:i>&lt;Author></xhtml:i></xhtml:p><xhtml:p style="font-family: Arial"><xhtml:b>State:</xhtml:b> <xhtml:i>&lt;Draft/Proposed/Released></xhtml:i></xhtml:p><xhtml:p style="font-family: Arial"><xhtml:b>Version:</xhtml:b> <xhtml:i>&lt;0.1></xhtml:i></xhtml:p><xhtml:p style="text-align: left;font-family: Arial;"><xhtml:b>Date:</xhtml:b> <xhtml:i>&lt;05-03-2014></xhtml:i></xhtml:p></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_UhUGcKRSEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T11:38:37.430+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_HTJDsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="1. Introduction">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_JpXi8KRGEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_-7ENMKRFEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_bUWggKRSEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T11:39:24.362+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_WcCVcKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="1.1 Purpose">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_Cp-ScKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_AsOMUKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_fMiTAKRSEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T15:11:55.142+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_CzfokKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_hlRTsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:div style="font-family: Arial; text-align: left">This document will describe all Software Requirements for the &lt;module_name> module. The first chapters will give an outline on the functionality the module will provide. Additionaly an overview will be given of the context of the module, such as the system it will operate in and modules it will interact with.</xhtml:div></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_cnTHYKRYEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T12:22:29.300+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="1.2 Scope">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_Cp-ScKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_WcCVcKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_AsOMUKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_ehgxUKRYEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T15:11:41.101+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_CzfokKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_hlRTsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:div style="text-align: left;"><xhtml:div style="font-family: Arial">The scope of this specification includes all requirements needed for development of the module. This includes functional, non-functional and safety requirements. Constraints on design and implementation are also included.</xhtml:div><xhtml:div style="font-family: Arial">Technical solutions are not part of this document, as they will be covered in later stages of development. Test criteria however, are to be documented with each requirement to ensure the testeability.</xhtml:div></xhtml:div></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_GymkoKRbEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T12:41:31.370+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_HTJDsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="2. Overall description">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_JpXi8KRGEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_-7ENMKRFEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_PviqcKRbEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T12:42:32.189+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_WcCVcKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="2.1 System overview">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_Cp-ScKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_AsOMUKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_S5yY4KRbEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:40:31.051+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_CzfokKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_hlRTsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:p style="font-family: Arial; font-style: italic; text-align: left">&lt;Describe the system in which the module (for which this specification is) will operate. Depending on the module, you might need to start with a complete system description (i.e. a complete transmission, overview of an engine, etc) or you might suffice with just an overview of the basic software or application software.</xhtml:p><xhtml:p style="font-family: Arial; font-style: italic; text-align: left">Make sure you provide enough context so the reader can understand the context in which the module has to operate, so that when you next describe the functionality of the new module, it will make sense.></xhtml:p></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_omGiEKRgEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:56:09.717+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_WcCVcKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="2.2 Module context">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_Cp-ScKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_AsOMUKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_vMhccKRgEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:00:54.328+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_CzfokKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_hlRTsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:div style="font-family: Arial; font-style: italic; text-align: left">&lt;Describe the context around the module. I.e., what modules does it interact with, from where will it get inputs and what modules will use its output. This can be done with pictures or extracts from the Software Architecture if it is already known.></xhtml:div></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_GLOM0KRhEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:24:24.740+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="2.3 Module functionality">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_Cp-ScKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_WcCVcKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_AsOMUKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_Kj0kwKRhEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:26:36.490+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_CzfokKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_hlRTsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:p style="font-family: Arial; font-style: italic; text-align: left">&lt;Give an overview of the functionality (could be a User Story) that the module will provide. Do not go into technical sollutions, but describe the module as if it were black box.></xhtml:p></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_DUW38KRiEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:03:54.778+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_WcCVcKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="2.4 Use cases">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_Cp-ScKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_AsOMUKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_F8v2gKRiEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:31:32.673+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_CzfokKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_hlRTsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:div style="font-family: Arial; font-style: italic; text-align: left">&lt;Describe the use cases of the module. This will provide the reader insight in the different scenario's the module will be used under and what its expected behaviour under these scenario's is.></xhtml:div></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_FKhS4KRjEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:38:34.442+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_WcCVcKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="2.5 Assumptions and dependencies">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_Cp-ScKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_AsOMUKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_KeZAQKRjEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:41:26.777+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_CzfokKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_hlRTsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:div style="text-align: left;"><xhtml:div style="font-family: Arial; font-style: italic">&lt;Describe any assumptions that are made on the module or its operation.></xhtml:div><xhtml:div style="font-family: Arial; font-style: italic">&lt;Describe dependencies on other modules, components or systems.></xhtml:div></xhtml:div></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_xaIcIKRjEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:44:04.442+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_HTJDsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="3. Software Requirements">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_JpXi8KRGEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_-7ENMKRFEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_2T2kIKRjEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:44:06.459+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_CzfokKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_hlRTsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:div style="font-family: Arial; text-align: left">This chapter documents all requirements on the described module. </xhtml:div></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_IGFPoKRkEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:46:06.359+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_WcCVcKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="3.1 Interface Requirements">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_Cp-ScKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_AsOMUKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_LSSF4KRkEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:46:25.574+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_CzfokKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_hlRTsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div/>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_Oe6Z8KRkEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:49:44.918+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:div style="font-family: Arial; text-align: left;">The interface requirements document which external interface the module needs to provide or accept. It is split over the categories &quot;Hardware Interfaces&quot;, &quot;Software Interfaces&quot; and &quot;Communication Protocols&quot;.</xhtml:div></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_CzfokKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_hlRTsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_qFhJkKRkEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:49:52.404+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_Yy9wkKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="3.1.1 Software Interfaces">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_IQfPAKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_GK9s8KRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_vP_DUKRkEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:50:25.254+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="SW-MOD-3">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_Z6Zo0KRDEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_vkjdkaRCEeOJUuR4caRF_A</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_08esEKRkEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:53:08.729+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:p style="font-family: Arial; font-style: italic; text-align: left">&lt;Start inserting Software Interface Requirements here.></xhtml:p></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_6lLZ8KRkEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:51:43.619+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="3.1.2 Hardware Interfaces">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_IQfPAKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_Yy9wkKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_GK9s8KRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_92YsAKRkEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:53:12.720+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:p style="font-family: Arial; font-style: italic; text-align: left">&lt;Start inserting Hardware Interface requirements here></xhtml:p></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_IRYEMKRlEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:53:17.110+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="3.1.3 Communication Protocols">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_IQfPAKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_Yy9wkKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_GK9s8KRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_Lrv5UKRlEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:54:12.851+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:p style="font-family: Arial; font-style: italic; text-align: left">&lt;Start inserting communication protocol (CAN, LIN, etc) requirements here></xhtml:p></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_Uod8sKRlEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:54:37.905+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="3.2 Functional Requirements">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_Cp-ScKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_WcCVcKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_AsOMUKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_XsIiAKRlEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:56:26.658+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_CzfokKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_hlRTsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:div style="font-family: Arial; text-align: left">The functional requirements describe what functions are desired from the module, which actions should lead to what results, etc.</xhtml:div></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_mZBNMKRlEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T15:02:41.500+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_Yy9wkKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="3.2.1  [ Function/Feature Name (I.e. Downshifting, EGR Control, Clutch actuation, etc) ] ">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_IQfPAKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_GK9s8KRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_0c4JgKRlEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:58:12.209+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:p style="font-family: Arial; font-style: italic; text-align: left">&lt;Start inserting functional requirements here></xhtml:p></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_-_pksKRlEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:59:01.053+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="3.3 Non-Functional Requirements">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_Cp-ScKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_WcCVcKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_AsOMUKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_BX_8IKRmEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:01:08.359+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_CzfokKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_hlRTsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:div style="font-family: Arial; text-align: left;">This chapter describes the non-functional requirements on the module, such as quality requirements, stability requirements, performance requirements and security requirements.</xhtml:div></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_SLfugKRmEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T15:03:05.632+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_Yy9wkKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="3.3.1  [ Quality Requirements / Performance Requirements / Stability Requirements / ....  ] ">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_IQfPAKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_GK9s8KRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_Y6MbIKRmEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:02:15.979+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:p style="font-family: 'Segoe UI'; font-style: italic; text-align: left">&lt;Start inserting non-functional requirements for the chapter here></xhtml:p></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_dcHuMKRmEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:03:55.625+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="3.4 Safety Requirements">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_Cp-ScKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_WcCVcKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_AsOMUKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_fQUPsKRmEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:04:17.682+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_CzfokKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_hlRTsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:div style="font-family: Arial; text-align: left">This chapter documents all Functional Safety requirements for the module, as per the project Safety Plan.</xhtml:div></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_tAHnkKRmEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T15:03:14.208+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_Yy9wkKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="3.4.1 [ Safety Function X ] ">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_IQfPAKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_GK9s8KRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_v-8JIKRmEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:04:53.824+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:p style="font-family: Arial; font-style: italic; text-align: left">&lt;Start inserting safety requirements for the Safety Function X here></xhtml:p></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_9CJgwKRmEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:06:18.887+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_HTJDsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="4. Terms, Definitions and References">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_JpXi8KRGEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_-7ENMKRFEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_BSiX4KRnEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:06:50.055+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:div style="font-family: Arial; text-align: left">This chapter will provide a list of terms, definitions and abbreviations as well as a list of references.</xhtml:div></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_CzfokKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_hlRTsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_MoIXIKRnEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:08:02.260+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="4.1 Terms, definitions and abbreviations">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_Cp-ScKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_WcCVcKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_AsOMUKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_Qe9ewKRnEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:14:40.414+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_CzfokKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_hlRTsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:p style="font-family: Arial; font-style: italic; text-align: left">&lt;Insert table of terms, abbreviations and definitions here. This is best done (and stored) in Word at the moment, since ProR doesn't support editing of tables yet. You can copy-paste tables from word however.></xhtml:p></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_J4kkIKRoEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:15:20.558+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_EbGfkKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_WcCVcKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="4.2 References">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_Cp-ScKRHEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_AsOMUKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+        <SPEC-OBJECT IDENTIFIER="_L1FUIKRoEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:15:08.076+01:00">
+          <VALUES>
+            <ATTRIBUTE-VALUE-ENUMERATION>
+              <VALUES>
+                <ENUM-VALUE-REF>_CzfokKRMEeOf8ellMwLFzg</ENUM-VALUE-REF>
+              </VALUES>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-ENUMERATION-REF>_hlRTsKRMEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-ENUMERATION-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-ENUMERATION>
+            <ATTRIBUTE-VALUE-XHTML>
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-XHTML-REF>_bPw1EKRKEeOf8ellMwLFzg</ATTRIBUTE-DEFINITION-XHTML-REF>
+              </DEFINITION>
+              <THE-VALUE>
+                <xhtml:div><xhtml:p style="font-family: Arial; font-style: italic; text-align: left">&lt;Provide a list of references to other relevant or dependant documents, diagrams, models, etc></xhtml:p></xhtml:div>
+              </THE-VALUE>
+            </ATTRIBUTE-VALUE-XHTML>
+          </VALUES>
+          <TYPE>
+            <SPEC-OBJECT-TYPE-REF>_gc2sYKRHEeOf8ellMwLFzg</SPEC-OBJECT-TYPE-REF>
+          </TYPE>
+        </SPEC-OBJECT>
+      </SPEC-OBJECTS>
+      <SPECIFICATIONS>
+        <SPECIFICATION IDENTIFIER="_vkjdlqRCEeOJUuR4caRF_A" LAST-CHANGE="2014-03-05T09:47:11.846+01:00" LONG-NAME="Specification Document">
+          <VALUES>
+            <ATTRIBUTE-VALUE-STRING THE-VALUE="Requirements Document">
+              <DEFINITION>
+                <ATTRIBUTE-DEFINITION-STRING-REF>_vkjdlKRCEeOJUuR4caRF_A</ATTRIBUTE-DEFINITION-STRING-REF>
+              </DEFINITION>
+            </ATTRIBUTE-VALUE-STRING>
+          </VALUES>
+          <TYPE>
+            <SPECIFICATION-TYPE-REF>_vkjdk6RCEeOJUuR4caRF_A</SPECIFICATION-TYPE-REF>
+          </TYPE>
+          <CHILDREN>
+            <SPEC-HIERARCHY IDENTIFIER="_IgIQsKRLEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T10:47:10.445+01:00">
+              <OBJECT>
+                <SPEC-OBJECT-REF>_IfGV8KRLEeOf8ellMwLFzg</SPEC-OBJECT-REF>
+              </OBJECT>
+            </SPEC-HIERARCHY>
+            <SPEC-HIERARCHY IDENTIFIER="_swNssKRNEeOf8ellMwLFzg" LAST-CHANGE="2014-03-05T11:05:24.759+01:00">
+              <OBJECT>
+                <SPEC-OBJECT-REF>_svKj0KRNEeOf8ellMwLFzg</SPEC-OBJECT-REF>
+              </OBJECT>
+            </SPEC-HIERARCHY>
+            <SPEC-HIERARCHY IDENTIFIER="_UiOscKRSEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T11:38:37.430+01:00">
+              <OBJECT>
+                <SPEC-OBJECT-REF>_UhUGcKRSEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+              </OBJECT>
+              <CHILDREN>
+                <SPEC-HIERARCHY IDENTIFIER="_bVUJ0KRSEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T11:39:24.362+01:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_bUWggKRSEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_fNeuMKRSEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T11:39:49.001+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_fMiTAKRSEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_coO7gKRYEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T12:22:29.300+01:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_cnTHYKRYEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_eibXUKRYEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T12:22:41.715+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_ehgxUKRYEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+              </CHILDREN>
+            </SPEC-HIERARCHY>
+            <SPEC-HIERARCHY IDENTIFIER="_Gzi_0KRbEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T12:41:31.370+01:00">
+              <OBJECT>
+                <SPEC-OBJECT-REF>_GymkoKRbEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+              </OBJECT>
+              <CHILDREN>
+                <SPEC-HIERARCHY IDENTIFIER="_PwfssKRbEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T12:42:32.189+01:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_PviqcKRbEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_S6wpQKRbEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T12:42:52.381+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_S5yY4KRbEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_onNVUKRgEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:21:05.839+01:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_omGiEKRgEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_vNfFwKRgEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:21:51.287+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_vMhccKRgEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_GMSj0KRhEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:24:24.740+01:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_GLOM0KRhEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_Kk7_EKRhEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:24:55.327+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_Kj0kwKRhEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_DVVIUKRiEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:31:13.838+01:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_DUW38KRiEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_F9s4wKRiEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:31:32.673+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_F8v2gKRiEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_FLduEKRjEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:38:34.442+01:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_FKhS4KRjEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_KfXQoKRjEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:39:12.395+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_KeZAQKRjEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+              </CHILDREN>
+            </SPEC-HIERARCHY>
+            <SPEC-HIERARCHY IDENTIFIER="_xbIhsKRjEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:43:24.861+01:00">
+              <OBJECT>
+                <SPEC-OBJECT-REF>_xaIcIKRjEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+              </OBJECT>
+              <CHILDREN>
+                <SPEC-HIERARCHY IDENTIFIER="_2U4e4KRjEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:44:06.459+01:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_2T2kIKRjEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_IHCR4KRkEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:46:06.359+01:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_IGFPoKRkEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_Of87wKRkEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:46:49.243+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_Oe6Z8KRkEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_qGYFMKRkEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:49:52.404+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_qFhJkKRkEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                      <CHILDREN>
+                        <SPEC-HIERARCHY IDENTIFIER="_09UZkKRkEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:51:05.185+01:00">
+                          <OBJECT>
+                            <SPEC-OBJECT-REF>_08esEKRkEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                          </OBJECT>
+                        </SPEC-HIERARCHY>
+                      </CHILDREN>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_6mIcMKRkEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:51:43.619+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_6lLZ8KRkEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                      <CHILDREN>
+                        <SPEC-HIERARCHY IDENTIFIER="_93WVUKRkEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:52:08.200+01:00">
+                          <OBJECT>
+                            <SPEC-OBJECT-REF>_92YsAKRkEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                          </OBJECT>
+                        </SPEC-HIERARCHY>
+                      </CHILDREN>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_ISSqMKRlEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:53:17.110+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_IRYEMKRlEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                      <CHILDREN>
+                        <SPEC-HIERARCHY IDENTIFIER="_LsxNAKRlEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:53:35.254+01:00">
+                          <OBJECT>
+                            <SPEC-OBJECT-REF>_Lrv5UKRlEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                          </OBJECT>
+                        </SPEC-HIERARCHY>
+                      </CHILDREN>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_UpR1AKRlEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:54:37.905+01:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_Uod8sKRlEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_XtFkQKRlEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:55:01.050+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_XsIiAKRlEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_maBSwKRlEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:56:29.780+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_mZBNMKRlEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                      <CHILDREN>
+                        <SPEC-HIERARCHY IDENTIFIER="_0d3oAKRlEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:58:12.209+01:00">
+                          <OBJECT>
+                            <SPEC-OBJECT-REF>_0c4JgKRlEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                          </OBJECT>
+                        </SPEC-HIERARCHY>
+                      </CHILDREN>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="__Al_4KRlEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:59:01.053+01:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_-_pksKRlEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_BY_aoKRmEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T13:59:41.565+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_BX_8IKRmEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_SMhCMKRmEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:01:33.113+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_SLfugKRmEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                      <CHILDREN>
+                        <SPEC-HIERARCHY IDENTIFIER="_Y7KrgKRmEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:02:15.979+01:00">
+                          <OBJECT>
+                            <SPEC-OBJECT-REF>_Y6MbIKRmEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                          </OBJECT>
+                        </SPEC-HIERARCHY>
+                      </CHILDREN>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_ddDiUKRmEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:02:47.303+01:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_dcHuMKRmEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_fRQD0KRmEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:02:59.887+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_fQUPsKRmEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                    <SPEC-HIERARCHY IDENTIFIER="_tBECwKRmEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:04:32.392+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_tAHnkKRmEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                      <CHILDREN>
+                        <SPEC-HIERARCHY IDENTIFIER="_v_5ycKRmEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:04:53.824+01:00">
+                          <OBJECT>
+                            <SPEC-OBJECT-REF>_v-8JIKRmEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                          </OBJECT>
+                        </SPEC-HIERARCHY>
+                      </CHILDREN>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+              </CHILDREN>
+            </SPEC-HIERARCHY>
+            <SPEC-HIERARCHY IDENTIFIER="_9DHxIKRmEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:06:18.887+01:00">
+              <OBJECT>
+                <SPEC-OBJECT-REF>_9CJgwKRmEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+              </OBJECT>
+              <CHILDREN>
+                <SPEC-HIERARCHY IDENTIFIER="_BTgBMKRnEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:06:50.055+01:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_BSiX4KRnEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_MpFZYKRnEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:08:02.260+01:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_MoIXIKRnEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_Qf5S4KRnEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:08:28.970+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_Qe9ewKRnEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+                <SPEC-HIERARCHY IDENTIFIER="_J5jbkKRoEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:14:45.956+01:00">
+                  <OBJECT>
+                    <SPEC-OBJECT-REF>_J4kkIKRoEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                  </OBJECT>
+                  <CHILDREN>
+                    <SPEC-HIERARCHY IDENTIFIER="_L2C9cKRoEeOtDoqSupDwCQ" LAST-CHANGE="2014-03-05T14:15:08.076+01:00">
+                      <OBJECT>
+                        <SPEC-OBJECT-REF>_L1FUIKRoEeOtDoqSupDwCQ</SPEC-OBJECT-REF>
+                      </OBJECT>
+                    </SPEC-HIERARCHY>
+                  </CHILDREN>
+                </SPEC-HIERARCHY>
+              </CHILDREN>
+            </SPEC-HIERARCHY>
+          </CHILDREN>
+        </SPECIFICATION>
+      </SPECIFICATIONS>
+    </REQ-IF-CONTENT>
+  </CORE-CONTENT>
+  <TOOL-EXTENSIONS>
+    <REQ-IF-TOOL-EXTENSION>
+      <configuration:ProrToolExtension>
+        <configuration:specViewConfigurations>
+          <configuration:ProrSpecViewConfiguration specification="_vkjdlqRCEeOJUuR4caRF_A">
+            <configuration:columns>
+              <configuration:Column label="ID" width="156"/>
+              <configuration:Column label="Type" width="89"/>
+              <configuration:Column label="Description" width="676"/>
+              <configuration:Column label="State"/>
+            </configuration:columns>
+            <configuration:leftHeaderColumn>
+              <configuration:Column label="Lead Header Column" width="30"/>
+            </configuration:leftHeaderColumn>
+          </configuration:ProrSpecViewConfiguration>
+        </configuration:specViewConfigurations>
+        <configuration:generalConfiguration>
+          <configuration:ProrGeneralConfiguration>
+            <configuration:labelConfiguration>
+              <configuration:LabelConfiguration>
+                <defaultLabel>Description</defaultLabel>
+              </configuration:LabelConfiguration>
+            </configuration:labelConfiguration>
+          </configuration:ProrGeneralConfiguration>
+        </configuration:generalConfiguration>
+        <configuration:presentationConfigurations>
+          <configuration:ProrPresentationConfigurations>
+            <configuration:presentationConfigurations>
+              <linewrap:LinewrapConfiguration datatype="_vkjdkKRCEeOJUuR4caRF_A"/>
+              <id:IdConfiguration datatype="_tdlfIKREEeOf8ellMwLFzg" prefix="SW-MOD-" count="3"/>
+              <headline:HeadlineConfiguration datatype="_Pieg0KRFEeOf8ellMwLFzg" size="14"/>
+              <headline:HeadlineConfiguration datatype="_S7NXMKRFEeOf8ellMwLFzg" size="12"/>
+              <headline:HeadlineConfiguration datatype="_WFJjoKRFEeOf8ellMwLFzg" size="11"/>
+              <headline:HeadlineConfiguration datatype="_YNyEEKRFEeOf8ellMwLFzg" size="10"/>
+              <headline:HeadlineConfiguration datatype="_bogegKRFEeOf8ellMwLFzg" size="8"/>
+              <rtf:RtfConfiguration datatype="_de8w0KRHEeOf8ellMwLFzg"/>
+            </configuration:presentationConfigurations>
+          </configuration:ProrPresentationConfigurations>
+        </configuration:presentationConfigurations>
+      </configuration:ProrToolExtension>
+    </REQ-IF-TOOL-EXTENSION>
+  </TOOL-EXTENSIONS>
+</REQ-IF>
