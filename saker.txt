@@ -1,4 +1,5 @@
 Spade
 Hink
 kratta
+Stege
 
