@@ -1,0 +1,8 @@
+slang
+ballonger
+vattenpistol
+<<<<<<< HEAD
+bassäng
+=======
+snorkla
+>>>>>>> 421bb573dfce5b676fa5f801d2b7814f8d10a4af
