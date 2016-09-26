@@ -1,0 +1,4 @@
+if (Fotboll)
+	Hockey
+else
+	Bandy
