@@ -2,3 +2,6 @@ if (Fotboll)
 	Hockey
 else
 	Bandy
+
+While (Hockey) 
+	Drink_wine
