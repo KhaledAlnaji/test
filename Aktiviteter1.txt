@@ -4,3 +4,4 @@ Bygga
 Leka
 Run
 sjunga
+dansa
