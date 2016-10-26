@@ -5,3 +5,4 @@ Leka
 Run
 sjunga
 dansa
+springa
